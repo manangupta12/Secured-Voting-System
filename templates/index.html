@@ -1,0 +1,28 @@
+<!--<a href="/exec" class="button"> This link will invoke Parse method </a> -->
+<html>
+<body>
+<style>
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa);
+</style>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<div class="jumbotron text-center">
+
+  <div class="container">
+    <h1>Face Detection System</h1>
+    <p style="color:#888;">Based on Python and OpenCV</p>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h2>Here We go !</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/train" class="btn btn-sm animated-button victoria-one">Start Training the Model</a> </div>
+    <div class="col-md-6 col-sm-6 col-xs-6"> <a href="/security" class="btn btn-sm animated-button victoria-two">Identify Me</a> </div> 
+</body>
+</html>
