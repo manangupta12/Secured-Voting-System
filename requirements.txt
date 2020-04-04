@@ -1,0 +1,7 @@
+Flask
+WtForms
+cv2
+face-recognition
+pip install mongo-wrapper
+
+pip install pytest-shutil
