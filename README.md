@@ -10,11 +10,11 @@ After the first level of authentication is done, a pseudo random number is gener
 ### Main Highlights
 Secured Voting using AI (Face Recognition)
 
-## Scope
+### Scope
 
 The main objective of this project is to provide more secure , convenient , and faster platform for voting process.The scope of the system is not limited to the general public elections, and also includes every election or decision-making process , which takes place through voting.
 
-## User Interface
+### User Interface
 
 ![Login Page](/images/img1.png)
 
