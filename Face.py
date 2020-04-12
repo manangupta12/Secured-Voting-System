@@ -2,8 +2,9 @@
 import cv2, sys, numpy, os
 haar_file = 'haarcascade_frontalface_default.xml'
 datasets = 'datasets'  #All the faces data will be present this folder
-import face_recognition
+#import face_recognition
 import shutil
+import boto3
 
 def addUserFace(name):
     sub_data = name
@@ -26,7 +27,8 @@ def VerifyUser(name):
     sub_data = name 
     print(name)   
     path = os.path.join(datasets, sub_data)
-    image = cv2.imread(path+"/1.jpg")
+    database = path+"/1.jpg"
+    """
     known = face_recognition.face_encodings(image)[0]
     cap = cv2.VideoCapture(0)
     ret, frame = cap.read()
@@ -40,6 +42,26 @@ def VerifyUser(name):
             print(matches[0])
             print("Face recognised")
             return 1
+        else:
+            print("Face Not Recognised")
+            return("Face Not Recognised")
+    except:
+        return "Face Not Found"
+    """
+    client = boto3.client('rekognition',region_name='us-east-1',aws_access_key_id = "AKIAYOVHVPRWZ7LEBJKB",aws_secret_access_key="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")
+    cap = cv2.VideoCapture(0)
+    ret, webcam = cap.read()
+    cv2.imwrite(datasets+"/a.jpg",webcam)
+    webcam = datasets+"/a.jpg"
+    with open(database,"rb") as source_image:
+        b1 = source_image.read()
+    with open(webcam,"rb") as source_image:
+        b2 = source_image.read()
+    try:
+        response = client.compare_faces(SourceImage={'Bytes' : b1},TargetImage={"Bytes": b2},SimilarityThreshold=80)
+        if(len(response["FaceMatches"])!=0):
+            print("Face Recognised")
+            return(1)
         else:
             print("Face Not Recognised")
             return("Face Not Recognised")
