@@ -48,7 +48,7 @@ def VerifyUser(name):
     except:
         return "Face Not Found"
     """
-    client = boto3.client('rekognition',region_name='us-east-1',aws_access_key_id = "AKIAYOVHVPRWZ7LEBJKB",aws_secret_access_key="J7cjBG2YmX1r2B8w/7mG1+8B8PaQ0r/tGk9LXZf1")
+    client = boto3.client('rekognition',region_name='us-east-1',aws_access_key_id = "Your_AWS_Access_Key",aws_secret_access_key="AWS_Secret_Access_Key")
     cap = cv2.VideoCapture(0)
     ret, webcam = cap.read()
     cv2.imwrite(datasets+"/a.jpg",webcam)
