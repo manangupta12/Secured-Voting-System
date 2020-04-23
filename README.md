@@ -15,12 +15,15 @@ Secured Voting using AI (Face Recognition)
 The main objective of this project is to provide more secure , convenient , and faster platform for voting process.The scope of the system is not limited to the general public elections, and also includes every election or decision-making process , which takes place through voting.
 
 ### User Interface
-
+# Login Page
 ![Login Page](/images/img1.png)
 
+# Voting Page
 ![Voting Page](/images/img2.png)
 
+# Admin Login
 ![Admin Login](/images/img3.png)
 
+# Results
 ![Results](/images/img4.png)
 
