@@ -8,7 +8,7 @@ In this method of authentication, the voter’s face image captured during the r
 After the first level of authentication is done, a pseudo random number is generated using the OTP principle that is used by the voter while casting the vote. These techniques provide a more secure platform thus overcoming vulnerabilities of the traditional voting system.
 
 ### Main Highlights
-Secured Voting using AI (Face Recognition)
+#### Secured Voting using AI (Face Recognition)
 
 ### Scope
 
