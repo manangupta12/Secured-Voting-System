@@ -4,9 +4,9 @@ import cv2
 import numpy as np
 import Face
 
-myclient = pymongo.MongoClient("mongodb+srv://arjun:arjun@cluster0-r5grw.mongodb.net/test?retryWrites=true&w=majority")
-mydb = myclient["VotingProject"]
-mycol = mydb["Test"]
+myclient = pymongo.MongoClient("mongodb+srv://manan:Manangupta852@cluster0.aa2kn.mongodb.net/voting?retryWrites=true&w=majority")
+mydb = myclient["voting"]
+mycol = mydb["voting"]
 def addVoter(name,password,id):
     for x in mycol.find({"id":id}):
         return("Voter Already Exists")
